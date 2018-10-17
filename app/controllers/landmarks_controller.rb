@@ -26,7 +26,7 @@ class LandmarksController < ApplicationController
     @landmark.save
     redirect "/landmarks"
   end
-  post '/ladnmarks/:id' do
+  patch '/ladnmarks/:id' do
 
     @landmark = Landmark.find_by_id(params[:id])
     @landmark.name = params['landmark']['name']
