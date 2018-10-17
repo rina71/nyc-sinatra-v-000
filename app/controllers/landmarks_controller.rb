@@ -20,7 +20,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find_by_id(params[:id])
     erb :'landmarks/edit'
   end
-  patch '/ladnmarks/:id' do
+  patch '/ladnmarks' do
 
     @landmark = Landmark.find_by_id(params[:id])
     @landmark.name = params['landmark']['name']
